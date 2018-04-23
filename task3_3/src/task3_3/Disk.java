@@ -14,11 +14,11 @@ public class Disk {
 	public Disk() {
 		this.Genre="";
 		this.track_count=0;	
-		test_fill(); // Заполняем тестовыми значениями		
+		//	
 	}
 	
 	
-	private void test_fill() {		
+	public void test_fill() {		
 		add_track(100, "aaa", "Rock");
 		add_track(100, "bbb", "Pop");
 		add_track(100, "ccc", "Indie");

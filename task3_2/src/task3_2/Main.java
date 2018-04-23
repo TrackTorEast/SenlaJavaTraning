@@ -6,16 +6,15 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		
-		int min = 100, max = 999; 
+		MyRandomGenerator myGen = new MyRandomGenerator();
+		RandomActions rAct = new RandomActions();
 		Integer r1, r2, r3, res;
-		String str = "";
+
 		
 		
-		max -= min;
-		r1 = (int) (Math.random() * ++max) + min;
-		r2 = (int) (Math.random() * ++max) + min;
-		r3 = (int) (Math.random() * ++max) + min;
+		r1 = myGen.generate(100, 999);
+		r2 = myGen.generate(100, 999);
+		r3 = myGen.generate(100, 999);
 		
 		
 		System.out.println("Три случайных числа");
@@ -24,10 +23,9 @@ public class Main {
 		System.out.println(r3);
 		
 		
-		str = r1.toString() + r2.toString();
-		System.out.println("Результат склейки: " + str);
+		r1 = rAct.appendInt(r1, r2);		
+		System.out.println("Результат склейки: " + r1);
 		
-		r1 = Integer.parseInt(str);;
 		res = r1 - r3;
 		System.out.println("Результат вычитания из слейки третьего числа: " + res);
 		
